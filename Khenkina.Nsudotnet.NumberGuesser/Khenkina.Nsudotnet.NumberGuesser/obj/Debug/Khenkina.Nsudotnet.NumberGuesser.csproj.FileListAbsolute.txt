@@ -1,0 +1,6 @@
+C:\Users\Natalia\Documents\GitHub\nsudotnet\Khenkina.Nsudotnet.NumberGuesser\Khenkina.Nsudotnet.NumberGuesser\bin\Debug\Khenkina.Nsudotnet.NumberGuesser.exe.config
+C:\Users\Natalia\Documents\GitHub\nsudotnet\Khenkina.Nsudotnet.NumberGuesser\Khenkina.Nsudotnet.NumberGuesser\obj\Debug\Khenkina.Nsudotnet.NumberGuesser.csprojResolveAssemblyReference.cache
+C:\Users\Natalia\Documents\GitHub\nsudotnet\Khenkina.Nsudotnet.NumberGuesser\Khenkina.Nsudotnet.NumberGuesser\bin\Debug\Khenkina.Nsudotnet.NumberGuesser.exe
+C:\Users\Natalia\Documents\GitHub\nsudotnet\Khenkina.Nsudotnet.NumberGuesser\Khenkina.Nsudotnet.NumberGuesser\bin\Debug\Khenkina.Nsudotnet.NumberGuesser.pdb
+C:\Users\Natalia\Documents\GitHub\nsudotnet\Khenkina.Nsudotnet.NumberGuesser\Khenkina.Nsudotnet.NumberGuesser\obj\Debug\Khenkina.Nsudotnet.NumberGuesser.exe
+C:\Users\Natalia\Documents\GitHub\nsudotnet\Khenkina.Nsudotnet.NumberGuesser\Khenkina.Nsudotnet.NumberGuesser\obj\Debug\Khenkina.Nsudotnet.NumberGuesser.pdb
