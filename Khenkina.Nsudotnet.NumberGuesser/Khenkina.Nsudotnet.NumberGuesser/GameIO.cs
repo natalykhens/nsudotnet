@@ -4,18 +4,15 @@ namespace Khenkina.Nsudotnet.NumberGuesser
 {
     class GameIO
     {
-        private static readonly string[] OATH =
-        {
-         
-                    "BYSTREE, %NAME!",
-                    " ESCHO BYSTREE, %NAME?",
-                    "%NAME, TORMOZ!"
-        };
+        static string[] OATH = new String[4] { "{0}, BYSTREE \n",
+                                               "{0}, ESCHO BYSTREE \n",
+                                               "FAIL, {0}\n", 
+                                               "{0},TORMOZ!\n"};
+
 
         public static void WriteResult(int attempts, TimeSpan playedTime)
         {
             Console.WriteLine("DONE {0} ITER ( {1}). PLAY MORE?",attempts,playedTime);
-            // Console.WriteLine($"Хорош, отгадал за {attempts} попыток (за {playedTime}). Ещё будешь играть?");
         }
 
         public static void WriteNumberIsMore()
@@ -30,13 +27,16 @@ namespace Khenkina.Nsudotnet.NumberGuesser
 
         public static void WriteRules(int minNumber, int maxNumber)
         {
+            Console.WriteLine(String.Format("{0},TORMOZ!\n", Program.userName));
+            Console.WriteLine(" name {0}", Program.userName);
             Console.WriteLine(" Guess the number ({0}-{1}).",minNumber,maxNumber);
         }
 
         public static string ReadPlayerName()
         {
             WriteInputNameMessage();
-            return Console.ReadLine();
+            String userName = Console.ReadLine();
+            return userName;
         }
 
         private static void WriteInputNameMessage()
@@ -44,9 +44,10 @@ namespace Khenkina.Nsudotnet.NumberGuesser
             Console.Write("NAME:");
         }
 
-        public static void WriteSwearing(String userName, Random random)
+        public static void WriteSwearing( Random random)
         {
-            Console.WriteLine(OATH[random.Next(0, OATH.Length)].Replace("%NAME", userName));
+            int n = random.Next(0,3);
+            Console.WriteLine(String.Format(OATH[n], Program.userName));
         }
 
         public static bool ReadYesNo()
@@ -92,14 +93,14 @@ namespace Khenkina.Nsudotnet.NumberGuesser
             while (!correctInput)
             {
                 WriteInputMessage();
-                try
-                {
-                    result = int.Parse(Console.ReadLine());
-                    correctInput = true;
-                }
-                catch (Exception e)
+                String res = Console.ReadLine();
+                if (!int.TryParse(res, out result))
                 {
                     WriteInputError();
+                } 
+                else
+                {
+                    correctInput = true;
                 }
             }
             return result;

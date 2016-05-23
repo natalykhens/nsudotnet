@@ -11,11 +11,11 @@ namespace Khenkina.Nsudotnet.NumberGuesser
     {
         private const int MinNumber = 0;
         private const int MaxNumber = 100;
-
+        public static String userName;
         static void Main(string[] args)
         {
             var random = new Random();
-            String userName = GameIO.ReadPlayerName();
+            userName = GameIO.ReadPlayerName();
 
             bool playAgain = true;
             while (playAgain)
@@ -46,7 +46,7 @@ namespace Khenkina.Nsudotnet.NumberGuesser
                         {
                             NumberIsLess();
                         }
-                        if (attempts % 4 == 0) GameIO.WriteSwearing(userName, random);
+                        if (attempts % 4 == 0) GameIO.WriteSwearing(random);
                     }
                 }
             }
